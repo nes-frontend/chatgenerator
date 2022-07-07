@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/chatgenerator/static/css/main.744bb733.css",
+    "main.js": "/chatgenerator/static/js/main.27d8a756.js",
+    "static/js/787.1fa270b5.chunk.js": "/chatgenerator/static/js/787.1fa270b5.chunk.js",
+    "index.html": "/chatgenerator/index.html",
+    "main.744bb733.css.map": "/chatgenerator/static/css/main.744bb733.css.map",
+    "main.27d8a756.js.map": "/chatgenerator/static/js/main.27d8a756.js.map",
+    "787.1fa270b5.chunk.js.map": "/chatgenerator/static/js/787.1fa270b5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.744bb733.css",
+    "static/js/main.27d8a756.js"
+  ]
+}
