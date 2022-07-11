@@ -20,7 +20,6 @@ export const Shuffle = () => {
   const talkList = useRecoilValue(talkListState);
 
   const handleStop = () => {
-    setConfetti(true);
     setIsStarted(false);
   };
   const handleGo = async () => {
@@ -43,14 +42,30 @@ export const Shuffle = () => {
       }, 100);
       return () => {
         clearInterval(intervalId);
+        tickShuffleTitle();
       };
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isStarted]);
 
   useEffect(() => {
     setShuffledUser(shuffle(personList)[0]);
     setShuffledTitle(shuffle(talkList)[0]);
   }, [clock, personList, talkList]);
+
+  const delay = (ms: number) => new Promise((res) => setTimeout(res, ms));
+
+  const tickShuffleTitle = async () => {
+    await delay(1000);
+    setShuffledTitle(shuffle(talkList)[0]);
+    await delay(1000);
+    setShuffledTitle(shuffle(talkList)[0]);
+    await delay(1000);
+    setShuffledTitle(shuffle(talkList)[0]);
+    await delay(1000);
+    setShuffledTitle(shuffle(talkList)[0]);
+    setConfetti(true);
+  };
 
   return (
     <Grid container spacing={2} direction="column" alignItems="center">
